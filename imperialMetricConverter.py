@@ -10,6 +10,7 @@ while True:
                     6. Kilometers per Hour -> Miles per Hour
                     7. <Feet>' <Inches>" -> Inches
                     8. Inches -> <Feet>' <Inches>"
+                    9. Feet -> Meters
                     0. Exit Application
     ''')
 
@@ -30,6 +31,8 @@ while True:
             cu.case_7()
         case "8":
             cu.case_8()
+        case "9":
+            cu.case_9()
         case "0":
             break
         case _:
