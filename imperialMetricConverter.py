@@ -11,6 +11,7 @@ while True:
                     7. <Feet>' <Inches>" -> Inches
                     8. Inches -> <Feet>' <Inches>"
                     9. Feet -> Meters
+                    10. Meters -> Feet
                     0. Exit Application
     ''')
 
@@ -33,6 +34,8 @@ while True:
             cu.case_8()
         case "9":
             cu.case_9()
+        case "10":
+            cu.case_10()
         case "0":
             break
         case _:

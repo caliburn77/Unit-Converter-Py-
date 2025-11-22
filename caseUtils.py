@@ -50,12 +50,17 @@ def case_8():
     resFeet, resInches = cu.inches_to_feetinches(inches)
     print(f'{inches}in = {resFeet}\' {resInches}\".')
     time.sleep(3)
+
 #takes feet and converts to meters. first converts feet to inches, then calls to_centimeters, then converts cm to m
 def case_9():
     feet = float(input("Enter Feet: "))
-    inches = feet * 12
-    meters = round(cu.to_centimeters(inches) / 100, 2)
-    print(f'{feet}ft = {meters}m')
+    print(f'{feet}ft = {cu.feet_to_meters(feet)}m.')
+    time.sleep(3)
+
+#takes meters and converts to feet
+def case_10():
+    meters = float(input("Enter Meters: "))
+    print(f'{meters}m = {cu.meters_to_feet(meters)}ft.')
     time.sleep(3)
 
 #default case

@@ -26,3 +26,8 @@ def inches_to_feetinches(inches):
     remain_inches = inches - (feet * 12)
     return feet, round(remain_inches, 2)
 
+def feet_to_meters(feet):
+    return round(feet / 3.281, 2)
+
+def meters_to_feet(meters):
+    return round(meters * 3.281, 2)
