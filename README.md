@@ -9,3 +9,4 @@ Things to add/change:
 4. Make GUI
 5. Make into executable
 6. Continue to check boundary conditions of inputs
+7. Cleanup caseUtils by using other functions
