@@ -3,9 +3,20 @@ import time
 
 #takes pounds and converts to kg
 def case_1():
-    inpPounds = float(input("Enter Pounds: "))
-    print(f'{inpPounds}lbs = {cu.to_kilograms(inpPounds)}kg.')
-    time.sleep(3)
+    while True:
+        inpPounds = input("Enter Pounds: ")
+        match inpPounds:
+            case str(s):
+                try:
+                    float_value=float(s)
+                    print(f'{s}lbs = {cu.to_kilograms(float_value)}kg.')
+                    time.sleep(3)
+                    break
+                except ValueError:
+                    print('Please enter a valid float. ')
+            case _:
+                print("Please enter a valid float as a string. ")
+                time.sleep(3)
 
 #takes kg and converts to pounds
 def case_2():
