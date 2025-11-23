@@ -76,7 +76,7 @@ def case_10():
 
 #default case
 def case_default():
-    print("Please enter a valid number.")
+    print("Please enter a valid number from the list.")
     time.sleep(3)
 
 #test

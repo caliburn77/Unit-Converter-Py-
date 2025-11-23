@@ -8,3 +8,4 @@ Things to add/change:
 3. Make things more efficient as I learn more
 4. Make GUI
 5. Make into executable
+6. Continue to check boundary conditions of inputs
