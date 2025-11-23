@@ -1,177 +1,101 @@
-import converterUtils as cu
+from classesUtils import *
 import time
 
 #takes pounds and converts to kg
 def case_1():
     while True:
-        inpPounds = input("Enter Pounds: ")
-        match inpPounds:
-            case str(s):
-                try:
-                    float_value=float(s)
-                    print(f'{s}lbs = {cu.to_kilograms(float_value)}kg.')
-                    time.sleep(3)
-                    break
-                except ValueError:
-                    print('Please enter a valid float. ')
-            case _:
-                print("Please enter a valid float as a string. ")
+        inpPounds = Pounds(input("Enter Pounds: "))
+        if type(inpPounds.get_as_float()) == float:
+            break
+    print(f'{inpPounds.get_as_float()}lbs = {inpPounds.to_kg()}kg. ')
+    time.sleep(3)
 
 #takes kg and converts to pounds
 def case_2():
     while True:
-        inpKilograms = input("Enter Kilograms: ")
-        match inpKilograms:
-            case str(s):
-                try:
-                    float_value=float(s)
-                    print(f'{s}kg = {cu.to_pounds(float_value)}lbs.')
-                    time.sleep(3)
-                    break
-                except ValueError:
-                    print('Please enter a valid float. ')
-            case _:
-                print('Please enter a valid float as a string. ')
+        inpKilograms = Kilograms(input("Enter Kilograms: "))
+        if type(inpKilograms.get_as_float()) == float:
+            break
+    print(f'{inpKilograms.get_as_float()}kg = {inpKilograms.to_lbs()}lbs. ')
+    time.sleep(3)
 
 #takes inches and converts to centimeters
 def case_3():
     while True:
-        inpInches = input("Enter Inches: ")
-        match inpInches:
-            case str(s):
-                try:
-                    float_value=float(s)
-                    print(f'{s}in = {cu.to_centimeters(float_value)}cm. ')
-                    time.sleep(3)
-                    break
-                except ValueError:
-                    print('Please enter a valid float. ')
-            case _:
-                print('Please enter a valid float as a string. ')
+        inpInches = Inches(input("Enter Inches: "))
+        if type(inpInches.get_as_float()) == float:
+            break
+    print(f'{inpInches.get_as_float()}in = {inpInches.to_cm()}cm. ')
+    time.sleep(3)
 
 #takes centimeters and converts inches
 def case_4():
     while True:
-        inpCentimeters = input("Enter Centimeters: ")
-        match inpCentimeters:
-            case str(s):
-                try:
-                    float_value=float(s)
-                    print(f'{s}cm = {cu.to_inches(float_value)}in. ')
-                    time.sleep(3)
-                    break
-                except ValueError:
-                    print('Please enter a valid float. ')
-            case _:
-                print('Please enter a valid float as a string. ')
+        inpCentimeters = Centimeters(input("Enter Centimeters: "))
+        if type(inpCentimeters.get_as_float()) == float:
+            break
+    print(f'{inpCentimeters.get_as_float()}cm = {inpCentimeters.to_in()}in. ')
+    time.sleep(3)
 
 #takes mph and converts to kph
 def case_5():
     while True:
-        inpMiles = input("Enter the speed in Miles per Hour: ")
-        match inpMiles:
-            case str(s):
-                try:
-                    float_value=float(s)
-                    print(f'{s}mph = {cu.to_kph(float_value)}kph.')
-                    time.sleep(3)
-                    break
-                except ValueError:
-                    print('Please enter a valid float. ')
-            case _:
-                print('Please enter a valid float as a string. ')
+        inpMiles = MPH(input("Enter the speed in Miles Per Hour: "))
+        if type(inpMiles.get_as_float()) == float:
+            break
+    print(f'{inpMiles.get_as_float()}mph = {inpMiles.to_kph()}kph. ')
+    time.sleep(3)
 
 #takes kph and converts to mph
 def case_6():
     while True:
-        inpKm = input("Enter the speed in Kilometers per Hour: ")
-        match inpKm:
-            case str(s):
-                try:
-                    float_value=float(s)
-                    print(f'{s}kph = {cu.to_mph(float_value)}mph. ')
-                    time.sleep(3)
-                    break
-                except ValueError:
-                    print('Please enter a valid float. ')
-            case _:
-                print('Please enter a valid float as a string. ')
+        inpKm = KPH(input("Enter the speed in Kilometers Per Hour: "))
+        if type(inpKm.get_as_float()) == float:
+            break
+    print(f'{inpKm.get_as_float()}kmh = {inpKm.to_mph()}mph. ')
+    time.sleep(3)
 
 #takes <feet>' <inches>" and converts to inches
 def case_7():
     while True:
-        inpFeet = input("Enter Feet: ")
-        match inpFeet:
-            case str(s):
-                try:
-                    feet_float=float(s)
-                    break
-                except ValueError:
-                    print('Please enter a valid float. ')
-            case _:
-                print('Please enter a valid float as a string. ')
+        inpFeet = Feet(input("Enter Feet: "))
+        if type(inpFeet.get_as_float()) == float:
+            break
     while True:
-        inpInches = input("Enter Inches: ")
-        match inpInches:
-            case str(s):
-                try:
-                    inches_float=float(s)
-                    break
-                except ValueError:
-                    print('Please enter a valid float. ')
-            case _:
-                print('Please enter a valid float as a string. ')
-    print(f'{feet_float}\' {inches_float}\" = {cu.feetinches_to_inches(feet_float, inches_float)}in. ')
+        inpInches = Inches(input("Enter Inches: "))
+        if type(inpInches.get_as_float()) == float:
+            break
+    print(f'{inpFeet.get_as_float()}\' {inpInches.get_as_float()}\" = {inpFeet.feetin_to_in(inpInches.get_as_float())}in. ')
     time.sleep(3)
 
 #takes inches and converts to <feet>' <inches>"
 def case_8():
     while True:
-        inches = input("Enter Inches: ")
-        match inches:
-            case str(s):
-                try:
-                    inches_float=float(s)
-                    res_feet, res_inches=cu.inches_to_feetinches(inches_float)
-                    print(f'{inches_float}in = {res_feet}\' {res_inches}\". ')
-                    time.sleep(3)
-                    break
-                except ValueError:
-                    print('Please enter a valid float. ')
-            case _:
-                print('Please enter a valid float as a string. ')
+        inpInches = Inches(input("Enter Inches: "))
+        if type(inpInches.get_as_float()) == float:
+            break
+    resFeet, resInches = inpInches.in_to_feetin()
+    print(f'{inpInches.get_as_float()}in = {resFeet}\' {resInches}\". ')
+    time.sleep(3)
 
 #takes feet and converts to meters
 def case_9():
     while True:
-        feet = input("Enter Feet: ")
-        match feet:
-            case str(s):
-                try:
-                    feet_float=float(s)
-                    print(f'{s}ft = {cu.feet_to_meters(feet_float)}m. ')
-                    time.sleep(3)
-                    break
-                except ValueError:
-                    print('Please enter a valid float. ')
-            case _:
-                print('Please enter a valid float as a string. ')
+        inpFeet = Feet(input("Enter Feet: "))
+        if type(inpFeet.get_as_float()) == float:
+            break
+    print(f'{inpFeet.get_as_float()}ft = {inpFeet.feet_to_m()}m. ')
+    time.sleep(3)
 
 #takes meters and converts to feet
 def case_10():
     while True:
-        meters = input("Enter Meters: ")
-        match meters:
-            case str(s):
-                try:
-                    meters_float=float(s)
-                    print(f'{s}m = {cu.meters_to_feet(meters_float)}ft. ')
-                    time.sleep(3)
-                    break
-                except ValueError:
-                    print('Please enter a valid float. ')
-            case _:
-                print('Please enter a valid float as a string. ')
+        meters = Meters(input("Enter Meters: "))
+        if type(meters.get_as_float()) == float:
+            break
+    print(f'{meters.get_as_float()}m = {meters.meters_to_ft()}ft. ')
+    time.sleep(3)
+
 #default case
 def case_default():
     print("Please enter a valid number from the list.")

@@ -1,4 +1,4 @@
-import caseUtils as cu
+import caseUtils as caseu
 
 while True:
     choice = input('''Enter the number corresponding to which unit(s) you would like to convert: 
@@ -17,26 +17,26 @@ while True:
 
     match choice:
         case "1":
-            cu.case_1()
+            caseu.case_1()
         case "2":
-            cu.case_2()
+            caseu.case_2()
         case "3":
-            cu.case_3()
+            caseu.case_3()
         case "4":
-            cu.case_4()
+            caseu.case_4()
         case "5":
-            cu.case_5()
+            caseu.case_5()
         case "6":
-            cu.case_6()
+            caseu.case_6()
         case "7":
-            cu.case_7()
+            caseu.case_7()
         case "8":
-            cu.case_8()
+            caseu.case_8()
         case "9":
-            cu.case_9()
+            caseu.case_9()
         case "10":
-            cu.case_10()
+            caseu.case_10()
         case "0":
             break
         case _:
-            cu.case_default()
+            caseu.case_default()
