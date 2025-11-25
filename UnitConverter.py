@@ -12,6 +12,8 @@ while True:
                     8. Inches -> <Feet>' <Inches>"
                     9. Feet -> Meters
                     10. Meters -> Feet
+                    11. Grams -> Ounces
+                    12. Ounces -> Grams
                     0. Exit Application
     ''')
 
@@ -36,6 +38,10 @@ while True:
             caseu.case_9()
         case "10":
             caseu.case_10()
+        case "11":
+            caseu.case_11()
+        case "12":
+            caseu.case_12()
         case "0":
             break
         case _:

@@ -96,6 +96,22 @@ def case_10():
     print(f'{meters.get_as_float()}m = {meters.meters_to_ft()}ft. ')
     time.sleep(3)
 
+def case_11():
+    while True:
+        grams = Grams(input("Enter Grams: "))
+        if type(grams.get_as_float()) == float:
+            break
+    print(f'{grams.get_as_float()}g = {grams.to_oz()}oz. ')
+    time.sleep(3)
+
+def case_12():
+    while True:
+        ounces = Ounces(input("Enter Ounces: "))
+        if type(ounces.get_as_float()) == float:
+            break
+    print(f'{ounces.get_as_float()}oz = {ounces.to_grams()}g. ')
+    time.sleep(3)
+
 #default case
 def case_default():
     print("Please enter a valid number from the list.")

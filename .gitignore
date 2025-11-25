@@ -1,2 +1,6 @@
 __pycache__/
 .DS_Store
+UnitConverter.spec
+build/
+dist/
+unitc.ico

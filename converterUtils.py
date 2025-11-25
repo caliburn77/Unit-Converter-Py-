@@ -31,3 +31,9 @@ def feet_to_meters(feet):
 
 def meters_to_feet(meters):
     return round(meters * 3.281, 2)
+
+def grams_to_ounces(grams):
+    return round(grams / 28.35, 4)
+
+def ounces_to_grams(ounces):
+    return round(ounces * 28.35, 4)

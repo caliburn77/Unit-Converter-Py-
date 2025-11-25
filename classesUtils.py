@@ -55,3 +55,13 @@ class MPH(Unit):
 class KPH(Unit):
     def to_mph(self):
         return cu.to_mph(self.get_as_float())
+
+
+class Grams(Unit):
+    def to_oz(self):
+        return cu.grams_to_ounces(self.get_as_float())
+
+
+class Ounces(Unit):
+    def to_grams(self):
+        return cu.ounces_to_grams(self.get_as_float())
